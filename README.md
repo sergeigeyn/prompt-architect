@@ -1,6 +1,6 @@
 # Prompt Architect
 
-A Claude Code skill for creating, auditing, and improving AI prompts. Based on best practices for production AI agent prompt engineering.
+A Claude Code skill for creating, auditing, and improving AI prompts. Based on studying Claude Code's architecture and prompt engineering patterns used in production AI agents.
 
 ## What it does
 
@@ -12,10 +12,10 @@ Prompt Architect automatically detects what you need:
 
 ## Why this exists
 
-We studied how production AI agents handle prompts and found recurring patterns that make them effective:
+We studied how Claude Code handles prompts internally — system prompt, memory extraction, agent summary, tool summary, prompt suggestion, security classifier — and found recurring patterns that make them effective:
 
-1. **Numeric anchors** beat qualitative instructions ("≤25 words" > "be concise") — measurable output token reduction in A/B tests
-2. **NEVER rules** prevent more failures than DO rules — explicit prohibitions catch real-world edge cases
+1. **Numeric anchors** beat qualitative instructions ("≤25 words" > "be concise") — 1.2% output token reduction in Claude Code's A/B tests
+2. **NEVER rules** prevent more failures than DO rules — every NEVER in Claude Code is a scar from a real incident
 3. **Good/Bad examples with labels** teach by contrast, not by instruction
 4. **Escape valves** prevent hallucination when the model doesn't know what to do
 5. **One prompt = one task** — micro-prompts outperform multi-purpose prompts
@@ -137,6 +137,6 @@ MIT
 
 ## Credits
 
-Inspired by production AI agent architecture patterns.
+Based on studying [Claude Code](https://claude.ai/code) architecture by Anthropic.
 
 Built with [Claude Code](https://claude.ai/code).
